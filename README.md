@@ -2,6 +2,7 @@ Batch2Executable by ASiiMO
 
 Download: https://www.dropbox.com/s/ujoh10tq26g8hfm/batch2executable.rar?dl=0
 
+I did not change Fatih Kodak's software, i only built on top of it.
 
 I am using Fatih Kodak's bat to exe converter's command line tools for this project.
 So big thanks to him:
