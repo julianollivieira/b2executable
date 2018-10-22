@@ -1,7 +1,9 @@
-Batch2Executable by ASiiMO
+B2Executable by ASiiMO
 
-Download: https://www.dropbox.com/s/ujoh10tq26g8hfm/batch2executable.rar?dl=0
+A simple batch(.bat) file to executable(.exe) converter
 
+
+Download: https://www.dropbox.com/s/rws8mins9vfw1k0/B2Executable.rar?dl=0
 
 
 I did not change Fatih Kodak's software, i only built on top of it.
