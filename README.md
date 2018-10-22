@@ -2,9 +2,6 @@
 
 A simple batch(.bat) file to executable(.exe) converter made by me (ASiiMO)
 
-Just download the rar, extract and run B2Executable.exe!
-
-
 How to install:
 - Download the rar ([Download link](https://www.dropbox.com/s/rws8mins9vfw1k0/B2Executable.rar?dl=1))
 - Extract to a folder
