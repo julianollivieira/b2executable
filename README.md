@@ -1,9 +1,4 @@
 Batch2Executable by ASiiMO
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 40686bb9a8980340e1c399670cb15dffd0206a90
 Download: https://www.dropbox.com/s/ujoh10tq26g8hfm/batch2executable.rar?dl=0
 
 
