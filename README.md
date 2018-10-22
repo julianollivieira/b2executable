@@ -7,7 +7,8 @@ How to install:
 - Extract to a folder
 - Run B2Executable.exe
 
-I did not change Fatih Kodak's software, i only built on top of it.
-I am using Fatih Kodak's bat to exe converter's command line tools for this project.
+
+I am using Fatih Kodak's bat to exe converter's command line tools for this project,
+I did not change Fatih Kodak's software, i only built on top of it,
 So big thanks to him:
 http://www.f2ko.de/en/b2e.php
