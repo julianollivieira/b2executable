@@ -1,0 +1,10 @@
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\bin\Debug\ASiiMO_BatchCompiler.exe.config
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\bin\Debug\ASiiMO_BatchCompiler.exe
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\bin\Debug\ASiiMO_BatchCompiler.pdb
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\obj\Debug\ASiiMO_BatchCompiler.csprojAssemblyReference.cache
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\obj\Debug\ASiiMO_BatchCompiler.Form1.resources
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\obj\Debug\ASiiMO_BatchCompiler.Properties.Resources.resources
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\obj\Debug\ASiiMO_BatchCompiler.csproj.GenerateResource.cache
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\obj\Debug\ASiiMO_BatchCompiler.csproj.CoreCompileInputs.cache
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\obj\Debug\ASiiMO_BatchCompiler.exe
+C:\Users\J. Ollivieira\source\repos\ASiiMO_BatchCompiler\ASiiMO_BatchCompiler\obj\Debug\ASiiMO_BatchCompiler.pdb
