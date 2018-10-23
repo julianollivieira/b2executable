@@ -26,33 +26,38 @@ namespace ASiiMO_BatchCompiler
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result_bat = openFileDialog1.ShowDialog();
-            if(result_bat == DialogResult.OK)
+            OpenFileDialog openbatfile = new OpenFileDialog();
+            openbatfile.FileName = "";
+            openbatfile.Filter = "Batch file (*.bat)|*.bat";
+
+            
+
+            //DialogResult result_bat = openFileDialog1.ShowDialog();
+            if(openbatfile.ShowDialog() == DialogResult.OK)
             {
-                //Getting the BAT file informatiom
-                string batname = Path.GetFileNameWithoutExtension(openFileDialog1.FileName);
-                string batext = Path.GetExtension(openFileDialog1.FileName);
-                long batlength = new System.IO.FileInfo(openFileDialog1.FileName).Length;
-
-                //Setting the information labels to visible
-                label5.Visible = true;
-                label6.Visible = true;
-                label7.Visible = true;
-
-                //Changing labels to the BAT file information
-                label5.Text = batname;
-                label6.Text = batext;
-                label7.Text = (batlength.ToString() + " bytes");
-
-                //Changing the color for the BAT extension
-                if(label6.Text == ".bat")
+                if(Path.GetExtension(openbatfile.FileName) != ".bat")
                 {
-                    label6.ForeColor = System.Drawing.Color.Green;
+                    MessageBox.Show("Thats not a batch file!");
                 } else
                 {
-                    label6.ForeColor = System.Drawing.Color.Red;
+                    label1.Text = openbatfile.FileName;
+
+                    //Getting the BAT file information
+                    string batname = Path.GetFileNameWithoutExtension(openbatfile.FileName);
+                    long batlength = new System.IO.FileInfo(openbatfile.FileName).Length;
+
+                    //Setting the information labels to visible
+                    label5.Visible = true;
+                    label7.Visible = true;
+
+                    //Changing labels to the BAT file information
+                    label5.Text = batname;
+                    label7.Text = (batlength.ToString() + " bytes");
+
+                    button6.Enabled = true;
+
                 }
-                
+
             }
         }
 
@@ -60,7 +65,7 @@ namespace ASiiMO_BatchCompiler
         {
             SaveFileDialog savefile = new SaveFileDialog();
             savefile.FileName = "yourbatchfile.exe";
-            savefile.Filter = "Executables (*.exe)|*.exe|All files (*.*)|*.*";
+            savefile.Filter = "Executables (*.exe)|*.exe";
 
             if (savefile.ShowDialog() == DialogResult.OK)
 
@@ -84,33 +89,39 @@ namespace ASiiMO_BatchCompiler
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string b2eargs =
-                "/bat " + "\"" + openFileDialog1.FileName + "\"" +
+            if ((label1.Text != string.Empty) && (textBox1.Text != string.Empty))
+            {
+                string b2eargs =
+                "/bat " + "\"" + label1.Text + "\"" +
                 " /exe " + "\"" + textBox1.Text + "\"" +
                 (checkBox1.Checked ? " /x64" : null) +
                 (checkBox2.Checked ? " /invisible" : null) +
                 (checkBox3.Checked ? " /uac-admin" : null) +
                 (checkBox4.Checked ? " /uac-user" : null) +
                 (checkBox5.Checked ? " /upx" : null) +
-                (checkBox2.Checked ? " /invisible" : null) + 
+                (checkBox2.Checked ? " /invisible" : null) +
                 (checkBox6.Checked ? " /icon " + "\"" + textBox2.Text + "\"" : null);
 
-            // /bat [filename] || /exe [filename] || /invisible /x64 /uac-admin /uac-user /upx ||
+                // /bat [filename] || /exe [filename] || /invisible /x64 /uac-admin /uac-user /upx ||
 
-            Console.WriteLine("b2e.exe" + " "+ b2eargs);
-            System.Diagnostics.Process.Start("b2e.exe", " " + b2eargs);
-            Thread.Sleep(3000);
-            MessageBox.Show("Done!");
+                Console.WriteLine("b2e.exe" + " " + b2eargs);
+                System.Diagnostics.Process.Start("b2e.exe", " " + b2eargs);
+                Thread.Sleep(3000);
+                MessageBox.Show("Done!");
 
-            label11.Visible = true;
-            label9.Visible = true;
-            button4.Visible = true;
+                label11.Visible = true;
+                label9.Visible = true;
+                button4.Visible = true;
 
-            string exename = Path.GetFileNameWithoutExtension(textBox1.Text);
-            long exelength = new System.IO.FileInfo(textBox1.Text).Length;
+                string exename = Path.GetFileNameWithoutExtension(textBox1.Text);
+                long exelength = new System.IO.FileInfo(textBox1.Text).Length;
 
-            label11.Text = exename;
-            label9.Text = (exelength.ToString() + " bytes");
+                label11.Text = exename;
+                label9.Text = (exelength.ToString() + " bytes");
+            } else{
+                MessageBox.Show("Please add a .bat file and choose the output file.");
+            }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -121,6 +132,11 @@ namespace ASiiMO_BatchCompiler
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/asimo1/bat2executable");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            label1.Visible = true;
         }
     }
 }
