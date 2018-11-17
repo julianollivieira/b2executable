@@ -13,6 +13,6 @@ I did not change Fatih Kodak's software, i only built on top of it,
 So big thanks to him ([Link to his website](http://www.f2ko.de/en/b2e.php))
 
 
-Picture:
+Screenshot:
 <br>
 ![alt text](https://i.imgur.com/Mx9aPzM.png)
